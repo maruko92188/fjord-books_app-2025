@@ -25,4 +25,9 @@
   <body class="<%= params[:action] %>">
     <%= yield %>
   </body>
+
+  <nav class="page-nav">
+  <%= link_to(t('defaults.japanese'), locale: :ja) %> |
+  <%= link_to(t('defaults.english'), locale: :en) %>
+  </nav>
 </html>
