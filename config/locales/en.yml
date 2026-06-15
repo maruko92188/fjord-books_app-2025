@@ -21,7 +21,7 @@ en:
     update:
       notice: "%{name} was successfully updated."
     destroy:
-      notice: "%{name} was successfully destroy."
+      notice: "%{name} was successfully destroyed."
   activerecord:
     models:
       book:
