@@ -1,0 +1,37 @@
+ja:
+  defaults:
+    title: '書籍アプリ'
+    lists: '書籍一覧へ戻る'
+    show: '詳細を見る'
+    japanese: '日本語'
+    english: '英語'
+  books:
+    index:
+      title: '書籍一覧'
+      new: '新規登録する'
+    new:
+      title: '新規登録'
+    show:
+      edit: '内容を編集する'
+      delete: '削除する'
+    edit:
+      title: '内容編集'
+    create:
+      notice: "「%{name}」が追加されました。"
+    update:
+      notice: "「%{name}」が編集されました。"
+    destroy:
+      notice: "「%{name}」が削除されました。"
+  activerecord:
+    models:
+      book:
+    attributes:
+      book:
+        title: 'タイトル'
+        memo: 'メモ'
+        author: '著者'
+        picture: '画像'
+  helpers:
+    submit:
+      create: '新規登録する'
+      update: '内容を編集する'
