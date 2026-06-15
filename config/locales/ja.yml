@@ -24,7 +24,6 @@ ja:
       notice: "「%{name}」が削除されました。"
   activerecord:
     models:
-      book:
     attributes:
       book:
         title: 'タイトル'

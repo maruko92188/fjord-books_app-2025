@@ -24,7 +24,6 @@ en:
       notice: "%{name} was successfully destroyed."
   activerecord:
     models:
-      book:
     attributes:
       book:
         title: 'Title'
