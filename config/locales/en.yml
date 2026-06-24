@@ -29,7 +29,7 @@ en:
       notice: "%{name} was successfully destroyed."
   activerecord:
     errors:
-      blank: "can't be blank"
+      blank: "can't be blank."
     models:
     attributes:
       book:
