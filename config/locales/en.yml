@@ -1,4 +1,9 @@
 en:
+  errors:
+    messages:
+      heading:
+        one: '1 error prohibited this book from being saved:'
+        other: "%{count} errors prohibited this book from being saved:"
   defaults:
     title: 'Books App'
     lists: 'Back to books'
@@ -23,6 +28,8 @@ en:
     destroy:
       notice: "%{name} was successfully destroyed."
   activerecord:
+    errors:
+      blank: "can't be blank"
     models:
     attributes:
       book:
