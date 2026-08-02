@@ -1,8 +1,13 @@
 <h1>ユーザー一覧</h1>
 
-<div>
+<div class="index-items">
   <% @users.each do |user| %>
+  <div class="index-item">
     <%= render user %>
+      <p>
+        <%= link_to t('views.common.show', name: User.model_name.human.downcase), user %>
+      </p>
+    </div>
   <% end %>
 </div>
 
