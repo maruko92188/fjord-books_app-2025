@@ -229,6 +229,7 @@ en:
       title_index: "%{name}"
       title_new: "New %{name}"
       title_edit: "Editing %{name}"
+      head_title: "%{name} App"
       error: error
       validation_error: "%{errors} prohibited this %{name} from being saved"
       sign_out: Sign out
