@@ -231,6 +231,7 @@ en:
       title_edit: "Editing %{name}"
       error: error
       validation_error: "%{errors} prohibited this %{name} from being saved"
+      sign_out: Sign out
   controllers:
     common:
       notice_create: "%{name} was successfully created."
