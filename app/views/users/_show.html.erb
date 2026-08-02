@@ -1,19 +1,21 @@
-<div>
-  <strong><%= User.human_attribute_name(:email) %>:</strong>
-  <%= user.email %>
-</div>
+<div id="<%= dom_id user %>">
+  <p>
+    <strong><%= User.human_attribute_name(:email) %>:</strong>
+    <%= user.email %>
+  </p>
 
-<div>
-  <strong><%= User.human_attribute_name(:post_code) %>:</strong>
-  <%= user.post_code %>
-</div>
+  <p>
+    <strong><%= User.human_attribute_name(:post_code) %>:</strong>
+    <%= user.post_code %>
+  </p>
 
-<div>
-  <strong><%= User.human_attribute_name(:address) %>:</strong>
-  <%= user.address %>
-</div>
+  <p>
+    <strong><%= User.human_attribute_name(:address) %>:</strong>
+    <%= user.address %>
+  </p>
 
-<div>
-  <strong><%= User.human_attribute_name(:self_introduction) %>:</strong>
-  <%= user.self_introduction %>
+  <p>
+    <strong><%= User.human_attribute_name(:self_introduction) %>:</strong>
+    <%= user.self_introduction %>
+  </p>
 </div>
