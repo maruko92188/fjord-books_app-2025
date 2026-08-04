@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Books App" %></title>
+    <title><%= content_for(:title) || t('views.common.head_title', name: i18n_pluralize(Book.model_name.human)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -23,6 +23,17 @@
   </head>
 
   <body class="<%= params[:action] %>">
+    <header>
+    <nav class="page-nav">
+      <% if user_signed_in? %>
+        <%= link_to t('views.common.title_index', name: Book.model_name.human.downcase), root_path %> |
+        <%= link_to t('views.common.title_index', name: User.model_name.human.downcase), users_path %> |
+        <%= link_to t('views.common.sign_out', name: Book.model_name.human.downcase), destroy_user_session_path, data: { turbo_method: :delete } %>
+      <% end %>
+    </nav>
+    </header>
+    <p style="color: green"><%= notice %></p>
+    <p style="color: red"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
