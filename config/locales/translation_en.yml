@@ -6,6 +6,7 @@ en:
     attributes:
       book:
         author: Author
+        image: icon
         memo: Memo
         picture: Picture
         title: Title
