@@ -1,17 +1,22 @@
 <div id="<%= dom_id report %>">
   <p>
-    <strong>Title:</strong>
+    <strong><%= t('views.common.poster') %>:</strong>
+      <%= current_user_name(report.user) %>
+  </p>
+
+  <p>
+    <strong><%= t('views.common.post_date') %>:</strong>
+    <%= l(report.created_at, format: :short) %>
+  </p>
+
+  <p>
+    <strong><%= Report.human_attribute_name(:title) %>:</strong>
     <%= report.title %>
   </p>
 
   <p>
-    <strong>Body:</strong>
+    <strong><%= Report.human_attribute_name(:body) %>:</strong>
     <%= report.body %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= report.user_id %>
   </p>
 
 </div>
