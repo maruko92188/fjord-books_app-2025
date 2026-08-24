@@ -199,6 +199,7 @@ ja:
       sign_out: ログアウト
       poster: 投稿者
       post_date: 投稿日時
+      return: 戻る
     pagination:
       first: '« 最初'
       last: '最後 »'
