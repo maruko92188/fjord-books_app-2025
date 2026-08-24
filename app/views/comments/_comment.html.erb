@@ -1,0 +1,19 @@
+<div class="comment-item">
+  <p>
+    <strong><%= t('views.common.poster') %>:</strong>
+    <%= comment.user_id.present? ? current_user_name(comment.user) : '削除済みユーザー' %>
+  </p>
+
+  <p>
+    <strong><%= t('views.common.post_date') %>:</strong>
+    <%= l(comment.created_at, format: :short) %>
+  </p>
+
+  <p>
+    <strong><%= Comment.human_attribute_name(:body) %>:</strong>
+    <%= comment.body %>
+  </p>
+
+</div>
+
+

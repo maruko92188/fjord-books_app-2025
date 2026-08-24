@@ -10,3 +10,9 @@
 
   <%= button_to t('views.common.destroy', name: Book.model_name.human.downcase), @book, method: :delete %>
 </nav>
+
+<h1><%= Comment.model_name.human %></h1>
+
+<div class="comment-container">
+  <%= render(@book.comments.includes(:user).order(:created_at)) || "コメントはありません" %>
+</div>
