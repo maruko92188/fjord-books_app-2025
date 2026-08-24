@@ -18,7 +18,7 @@
 <h1><%= Comment.model_name.human %></h1>
 
 <div class="comment-container">
-  <%= render(@report.comments.includes(:user).order(:created_at)) || "コメントはありません" %>
+  <%= render(@report.comments.includes(:user).order(:created_at)) || t('views.common.nonexistent_comment') %>
 </div>
 
 <div>

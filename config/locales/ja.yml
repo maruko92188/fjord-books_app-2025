@@ -197,6 +197,7 @@ ja:
       validation_error: "%{errors}があるため、この%{name}は保存できませんでした"
       title_show: "%{name}の詳細"
       sign_out: ログアウト
+      nonexistent_comment: コメントはありません
       poster: 投稿者
       post_date: 投稿日時
       return: 戻る
