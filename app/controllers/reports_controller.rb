@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 class ReportsController < ApplicationController
-  before_action :set_report, only: %i[show edit update destroy]
+  before_action :set_own_report, only: %i[edit update destroy]
 
   def index
     @reports = Report.all
   end
 
-  def show; end
+  def show
+    @report = Report.find(params.expect(:id))
+  end
 
   def new
     @report = Report.new
@@ -39,8 +41,8 @@ class ReportsController < ApplicationController
 
   private
 
-  def set_report
-    @report = Report.find(params.expect(:id))
+  def set_own_report
+    @report = current_user.reports.find(params.expect(:id))
   end
 
   def report_params
