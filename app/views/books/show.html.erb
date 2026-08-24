@@ -16,3 +16,7 @@
 <div class="comment-container">
   <%= render(@book.comments.includes(:user).order(:created_at)) || "コメントはありません" %>
 </div>
+
+<div>
+  <%= render partial: 'comments/form', locals: {comment: @book.comments.new} %>
+</div>

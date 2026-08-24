@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.find(params.expect(:id))
   end
 
-  def report_params
-    params.expect(report: [:body])
+  def comment_params
+    params.expect(comment: [:body])
   end
 end
