@@ -197,6 +197,11 @@ ja:
       validation_error: "%{errors}があるため、この%{name}は保存できませんでした"
       title_show: "%{name}の詳細"
       sign_out: ログアウト
+      nonexistent_comment: コメントはありません
+      poster: 投稿者
+      post_date: 投稿日時
+      have_been_deleted: '削除済の%{name}'
+      return: 戻る
     pagination:
       first: '« 最初'
       last: '最後 »'

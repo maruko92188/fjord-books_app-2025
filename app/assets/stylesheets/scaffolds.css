@@ -259,6 +259,43 @@ Show
   margin: 12px auto 0;
   object-fit: contain;
 }
+/****************
+Comments
+****************/
+
+.comments-container {
+  max-width: var(--single-column-w);
+}
+
+.comment-item {
+  max-width: var(--single-column-w);
+  border: solid var(--global-bw) var(--global-bc);
+  padding: 16px 24px;
+  border-radius: var(--global-br);
+  font-size: var(--global-fz-md);
+  line-height: var(--global-lh);
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.comment-item p {
+  margin: 0;
+  padding: 0.8em 0;
+  border-top: solid var(--global-bw) var(--global-bc-muted);
+}
+
+.comment-item p:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.comment-item p:last-child {
+  padding-bottom: 0;
+}
+
+.comment-item strong {
+  font-size: var(--global-label-fz);
+}
 
 /****************
 New and Edit
