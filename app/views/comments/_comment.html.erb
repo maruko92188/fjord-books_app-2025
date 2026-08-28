@@ -1,7 +1,7 @@
 <div class="comment-item">
   <p>
     <strong><%= t('views.common.poster') %>:</strong>
-    <%= comment.user.present? ? current_user_name(comment.user) : '削除済みユーザー' %>
+    <%= comment.user.present? ? current_user_name(comment.user) : t('views.common.have_been_deleted', name: User.model_name.human) %>
   </p>
 
   <p>
