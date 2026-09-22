@@ -24,6 +24,7 @@ class Report < ApplicationRecord
 
   validates :title, presence: true
   validates :content, presence: true
+  validates :mentioning_report_id, uniqueness: { scope: :mentioned_report_id }
 
   def editable?(target_user)
     user == target_user
