@@ -1,7 +1,7 @@
 <% mentions = report.mentioned_reports %>
 <% if mentions.presence %>
 <div class="mentions-container">
-  <strong><%= t('.mentions', name: Report.model_name.human)%>:</strong>
+  <strong><%= t('.mentions', name: Report.model_name.human) %>:</strong>
   <ul>
     <% mentions.order(created_at: :desc).includes(:user).each do |mention| %>
       <li>
