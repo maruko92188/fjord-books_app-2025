@@ -1,7 +1,7 @@
  <% mentions = report.mentioned_reports %>
  <% return if mentions.blank? %>
 <div>
-  <strong>この日報に言及している日報:</strong>
+  <strong><%= t('.mentions', name: Report.model_name.human)%>:</strong>
     <ul>
       <% mentions.order(created_at: :desc).includes(:user).each do |mention| %>
         <li>
