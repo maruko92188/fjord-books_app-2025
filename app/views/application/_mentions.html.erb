@@ -1,0 +1,15 @@
+ <% mentions = report.mentioned_reports %>
+ <% return if mentions.blank? %>
+<div>
+  <strong>この日報に言及している日報:</strong>
+    <ul>
+      <% mentions.order(created_at: :desc).includes(:user).each do |mention| %>
+        <li>
+          <%= link_to mention.title, mention %>
+          <small>
+            (<%= link_to mention.user.name_or_email, mention.user %> - <%= l mention.created_at, format: :short %>)
+          </small>
+        </li>
+      <% end %>
+    </ul>
+</div>
