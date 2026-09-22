@@ -1,5 +1,5 @@
 <% mentions = report.mentioned_reports %>
-<% return if mentions.blank? %>
+<% if mentions.presence %>
 <div class="mentions-container">
   <strong><%= t('.mentions', name: Report.model_name.human)%>:</strong>
     <ul>
@@ -12,4 +12,5 @@
         </li>
       <% end %>
     </ul>
+  <% end %>
 </div>
