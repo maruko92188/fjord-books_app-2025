@@ -26,11 +26,28 @@ class Report < ApplicationRecord
   validates :content, presence: true
   validates :mentioning_report_id, uniqueness: { scope: :mentioned_report_id }
 
+  after_save :update_mentions
+
   def editable?(target_user)
     user == target_user
   end
 
   def created_on
     created_at.to_date
+  end
+
+  private
+
+  def update_mentions
+    self.mentioning_reports = Report.where(id: extract_ids)
+  end
+
+  def extract_ids
+    target_uri = "http://localhost:3000/reports/"
+    regexp = %r(#{target_uri}(\d+))
+    ids_table = self.content.scan(regexp)
+    ids = ids_table.flatten.uniq.map(&:to_i)
+    ids.delete(self.id)
+    ids
   end
 end
