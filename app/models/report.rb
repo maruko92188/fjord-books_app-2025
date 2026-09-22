@@ -7,11 +7,13 @@ class Report < ApplicationRecord
   has_many :mentionings,
            class_name: 'Mention',
            foreign_key: 'mentioning_report_id',
+           inverse_of: "mentioning_report",
            dependent: :destroy
 
   has_many :mentioneds,
            class_name: 'Mention',
            foreign_key: 'mentioned_report_id',
+           inverse_of: "mentioned_report",
            dependent: :destroy
 
   has_many :mentioning_reports,
