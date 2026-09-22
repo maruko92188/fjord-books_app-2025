@@ -2,15 +2,15 @@
 <% if mentions.presence %>
 <div class="mentions-container">
   <strong><%= t('.mentions', name: Report.model_name.human)%>:</strong>
-    <ul>
-      <% mentions.order(created_at: :desc).includes(:user).each do |mention| %>
-        <li>
-          <%= link_to mention.title, mention %>
-          <small>
-            (<%= link_to mention.user.name_or_email, mention.user %> - <%= l mention.created_at, format: :short %>)
-          </small>
-        </li>
-      <% end %>
-    </ul>
+  <ul>
+    <% mentions.order(created_at: :desc).includes(:user).each do |mention| %>
+      <li>
+        <%= link_to mention.title, mention %>
+        <small>
+          (<%= link_to mention.user.name_or_email, mention.user %> - <%= l mention.created_at, format: :short %>)
+        </small>
+      </li>
+    <% end %>
+  </ul>
 </div>
 <% end %>
