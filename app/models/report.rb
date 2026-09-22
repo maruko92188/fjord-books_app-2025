@@ -40,7 +40,10 @@ class Report < ApplicationRecord
   private
 
   def update_mentions
-    self.mentioning_reports = Report.where(id: extract_ids)
+    target_ids = extract_ids
+    return if previously_new_record? && target_ids.empty?
+    return if mentioning_report_ids.sort == target_ids.sort
+    self.mentioning_reports = Report.where(id: target_ids)
   end
 
   def extract_ids
