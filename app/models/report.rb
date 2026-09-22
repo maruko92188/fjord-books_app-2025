@@ -26,7 +26,6 @@ class Report < ApplicationRecord
 
   validates :title, presence: true
   validates :content, presence: true
-  validates :mentioning_report_id, uniqueness: { scope: :mentioned_report_id }
 
   after_save :update_mentions
 
