@@ -11,4 +11,10 @@ class ReportTest < ActiveSupport::TestCase
     assert report_by_alice.editable?(alice)
     assert_not report_by_alice.editable?(bob)
   end
+
+  test '#created_on' do
+    report = Report.new(created_at: Time.zone.local(2016, 10, 4))
+
+    assert_equal Date.new(2016, 10, 4), report.created_on
+  end
 end
