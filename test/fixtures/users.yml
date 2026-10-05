@@ -18,5 +18,9 @@ bob:
   email: 'bob@example.com'
   name: 'Bob'
 
+carol:
+  email: 'carol@example.com'
+  name: 'Carol'
+
 no_name:
   email: 'no_name@example.com'
