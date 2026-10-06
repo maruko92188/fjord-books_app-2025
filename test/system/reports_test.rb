@@ -6,7 +6,7 @@ class ReportsTest < ApplicationSystemTestCase
   setup do
     user = users(:alice)
     @report = reports(:posted_by_alice)
-    visit root_url
+    visit root_path
     fill_in 'Eメール', with: user.email
     fill_in 'パスワード', with: 'password'
     click_button 'ログイン'
