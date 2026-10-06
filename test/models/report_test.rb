@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-MENTION_URI = "http://localhost:3000/reports"
+MENTION_URI = 'http://localhost:3000/reports'
 
 class ReportTest < ActiveSupport::TestCase
   test '#editable?(target_user)' do
@@ -23,7 +23,7 @@ class ReportTest < ActiveSupport::TestCase
   test '#save_mentions 言及先のある日報を新規作成した' do
     report = Report.create!(
       user: users(:alice),
-      title: "My second report",
+      title: 'My second report',
       content: "I refered to #{MENTION_URI}/#{reports(:posted_by_bob).id}"
     )
 
@@ -40,7 +40,7 @@ class ReportTest < ActiveSupport::TestCase
   test '#save_mentions 言及先の日報が変わる' do
     report = Report.new(
       user: users(:alice),
-      title: "My third report",
+      title: 'My third report',
       content: "I refered to #{MENTION_URI}/#{reports(:posted_by_bob).id}"
     )
     report.update!(content: "I refered to #{MENTION_URI}/#{reports(:posted_by_carol).id}")
@@ -52,7 +52,7 @@ class ReportTest < ActiveSupport::TestCase
   test '#save_mentions 日報が削除されると言及がなくなる' do
     report = Report.create!(
       user: users(:alice),
-      title: "My third report",
+      title: 'My third report',
       content: "I refered to #{MENTION_URI}/#{reports(:posted_by_bob).id}"
     )
 
