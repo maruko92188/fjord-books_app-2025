@@ -36,12 +36,16 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#save_mentions 言及先の日報が変わる' do
-    report = Report.new(
+    report = Report.create!(
       user: users(:alice),
       title: 'My third report',
       content: "I refered to #{MENTION_URI}/#{reports(:posted_by_bob).id}"
     )
+
+    assert_includes report.mentioning_reports, reports(:posted_by_bob)
+
     report.update!(content: "I refered to #{MENTION_URI}/#{reports(:posted_by_carol).id}")
+    report.reload
 
     assert_includes report.mentioning_reports, reports(:posted_by_carol)
     assert_not_includes report.mentioning_reports, reports(:posted_by_bob)
