@@ -1,11 +1,17 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+posted_by_alice:
+  id : 1
+  user: alice
+  title: "Alice's report"
+  content: "This report was posted by alice."
 
-one:
-  user: one
-  title: MyString
-  content: MyText
+posted_by_bob:
+  id : 2
+  user: bob
+  title: "Bob's report"
+  content: "This report was posted by Bob."
 
-two:
-  user: two
-  title: MyString
-  content: MyText
+posted_by_carol:
+  id: 3
+  user: carol
+  title: "Carol's report"
+  content: "This report was potsted by Carol."
