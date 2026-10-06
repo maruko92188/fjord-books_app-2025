@@ -1,5 +1,3 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 posted_by_alice:
   id : 1
   user: alice
@@ -17,7 +15,3 @@ posted_by_carol:
   user: carol
   title: "Carol's report"
   content: "This report was potsted by Carol"
-# two:
-#   user: two
-#   title: MyString
-#   content: MyText
