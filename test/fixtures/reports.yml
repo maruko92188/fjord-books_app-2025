@@ -2,16 +2,16 @@ posted_by_alice:
   id : 1
   user: alice
   title: "Alice's report"
-  content: "This report was posted by alice"
+  content: "This report was posted by alice."
 
 posted_by_bob:
   id : 2
   user: bob
   title: "Bob's report"
-  content: "This report was posted by Bob"
+  content: "This report was posted by Bob."
 
 posted_by_carol:
   id: 3
   user: carol
   title: "Carol's report"
-  content: "This report was potsted by Carol"
+  content: "This report was potsted by Carol."
