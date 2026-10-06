@@ -11,5 +11,5 @@ carol:
   email: 'carol@example.com'
   name: 'Carol'
 
-no_name:
-  email: 'no_name@example.com'
+no_name_user:
+  email: 'no_name_user@example.com'

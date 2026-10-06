@@ -6,12 +6,10 @@ MENTION_URI = 'http://localhost:3000/reports'
 
 class ReportTest < ActiveSupport::TestCase
   test '#editable?(target_user)' do
-    report_by_alice = reports(:posted_by_alice)
-    alice = users(:alice)
-    bob = users(:bob)
+    report = reports(:posted_by_alice)
 
-    assert report_by_alice.editable?(alice)
-    assert_not report_by_alice.editable?(bob)
+    assert report.editable?(users(:alice))
+    assert_not report.editable?(users(:bob))
   end
 
   test '#created_on' do
